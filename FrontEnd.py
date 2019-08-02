@@ -6,7 +6,8 @@ from PyQt5.QtWidgets import (QLabel, QWidget,  QApplication, QLineEdit,
                              QPushButton, QVBoxLayout, QDesktopWidget, QMainWindow)
 from PyQt5.QtTest import QTest
 
-from BackEnd import Board
+from classes import Board
+from BackEnd import board_loader
 
 class ClickLabel(QLabel):
     #intento de label clickeable
@@ -118,6 +119,7 @@ class App(QWidget):
 if __name__ == '__main__':
     board = sys.argv[1]
     app = QApplication(sys.argv)
+    board = board_loader(board)
     ventana = App(board)
 
     app.exec_()
