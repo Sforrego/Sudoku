@@ -1,6 +1,7 @@
 import sys
 import random
 
+#https://stackoverflow.com/questions/10488719/generating-a-sudoku-of-a-desired-difficulty
 #file donde se va a escribir
 file = sys.argv[1]
 
